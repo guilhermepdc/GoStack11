@@ -1,13 +1,18 @@
 {
   "env": {
-    "es6": true
+    "es6": true,
+    "browser": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "@typescript-eslint/no-unused-vars"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -29,8 +34,8 @@
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "no-unused-expressions": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "import/prefer-default-export": "off",
     "@typescript-eslint/explicit-function-return-type": [
       "error",
@@ -45,7 +50,9 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "global-require": "off",
+    "bracket-spacing": ["always"]
   },
   "settings": {
     "import/resolver": {
