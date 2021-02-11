@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "emulator": "react-native run-android --port=1234",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "starter": "react-native start --port=1234",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
